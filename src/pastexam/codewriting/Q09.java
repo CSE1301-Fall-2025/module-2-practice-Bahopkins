@@ -28,6 +28,15 @@ public class Q09 {
 		System.out.println("Enter a value between 1-100 (inclusive): ");
 		int threshold = in.nextInt();
 		in.close();
-		
+		int countAbove = 0;
+		for (int i = 1; i <= quantity; i++) {
+			int randomValue = (int)(Math.random() * 100) + 1;
+			System.out.println("Random value " + i + ": " + randomValue);
+			if (randomValue > threshold) {
+                countAbove++;
+            }
+		} double percentage = (countAbove * 100.0) / quantity;
+        System.out.println("Total above threshold: " + countAbove);
+        System.out.println("Percentage above threshold: " + percentage + "%");
 	}
 }

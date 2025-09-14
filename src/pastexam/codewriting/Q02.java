@@ -17,6 +17,22 @@ public class Q02 {
 	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		System.out.print("What is the width or your rectangle? ");
+		double width = in.nextDouble();
+		System.out.print("What is the height or your rectangle? ");
+		double height = in.nextDouble();
+		double area = width * height;
+		if (area == 0) {
+			System.out.println("The area of your rectangle is " + area + "! Congratulations!");
+		} else {
+			System.out.println("The area of your rectangle is " + area + ". Please select values for the width and height that result in an area of 0.");
+			System.out.print("What is the new width or your rectangle? ");
+			width = in.nextDouble();
+			System.out.print("What is the new height or your rectangle? ");
+			height = in.nextDouble();	
+			area = width * height;
+			System.out.println("The area of your rectangle is " + area + "! Congratulations!");
+		}
 		
 	}
 }

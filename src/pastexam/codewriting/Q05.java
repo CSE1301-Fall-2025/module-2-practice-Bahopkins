@@ -17,6 +17,13 @@ public class Q05 {
 		System.out.println("Please enter a value for n: ");
 		int n = in.nextInt();
 		in.close();
-		
+		double result = 0;
+		for (int start = 1; start <= n; start++) {
+			if (start % 2 == 0) {
+				result -= (1.0 / start); 
+			} else {
+				result += (1.0 / start); 
+			}
+		} System.out.println("Result = " + result);
 	}
 }
